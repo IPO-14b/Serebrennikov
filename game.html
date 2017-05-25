@@ -19,7 +19,14 @@ var point = pjs.vector.point;
 var height = game.getWH().h;
 var width = game.getWH().w;
 
-
+var fon1 = game.newImageObject({
+ x : 0, y : 0,
+ file : 'imgs/fon.jpg',
+ h : height,
+ onload : function () {
+   fon2.x = fon1.x+fon1.w;
+ }
+});
 
 </script>
 </body>
