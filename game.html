@@ -33,7 +33,14 @@ var fon1 = game.newImageObject({
  h : height
 });
  
-
+var gr1 = game.newImageObject({
+ x : 0, y : 0,
+ file : 'imgs/ground.png',
+ w : width,
+ onload : function () {
+   gr2.y = gr1.y = height - 110 - gr1.h;
+ }
+});
  
  
 game.newLoop('game', function () {
