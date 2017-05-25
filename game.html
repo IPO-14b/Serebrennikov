@@ -33,13 +33,28 @@ var fon1 = game.newImageObject({
  h : height
 });
  
+var gr1 = game.newImageObject({
+ x : 0, y : 0,
+ file : 'imgs/ground.png',
+ w : width,
+ onload : function () {
+   gr2.y = gr1.y = height - 110 - gr1.h;
+   gr2.x = gr1.x+gr1.w;
+ }
+});
+ 
+ var gr2 = game.newImageObject({
+ x : 0, y : 0,
+ file : 'imgs/ground.png',
+ w : width
+});
 
- 
- 
+
 game.newLoop('game', function () {
   game.fill('#D9D9D9');
 
   fon1.draw();
+  fon2.draw();
 
 
 }); 
