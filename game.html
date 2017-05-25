@@ -21,7 +21,7 @@ var width = game.getWH().w;
 
 var fon1 = game.newImageObject({
  x : 0, y : 0,
- file : 'imgs/fon.jpg',
+ file : 'imgs/test_fon.jpg',
  h : height,
  onload : function () {
    fon2.x = fon1.x+fon1.w;
@@ -29,7 +29,7 @@ var fon1 = game.newImageObject({
  
  var fon2 = game.newImageObject({
  x : 0, y : 0,
- file : 'imgs/fon.jpg',
+ file : 'imgs/test_fon.jpg',
  h : height
 });
  
@@ -42,13 +42,21 @@ var gr1 = game.newImageObject({
    gr2.x = gr1.x+gr1.w;
  }
 });
+
  
- 
+ var gr2 = game.newImageObject({
+ x : 0, y : 0,
+ file : 'imgs/ground.png',
+ w : width
+});
+
+
 game.newLoop('game', function () {
   game.fill('#D9D9D9');
 
   fon1.draw();
   fon2.draw();
+
 
 
 }); 
