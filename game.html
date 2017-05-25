@@ -10,6 +10,17 @@ runner.html
 <script type="text/javascript" src="point.js"></script>
 <script type="text/javascript">
 
+var pjs = new PointJS('2d', 400, 400);
+pjs.system.initFullPage();
+
+var game = pjs.game;
+var point = pjs.vector.point;
+
+var height = game.getWH().h;
+var width = game.getWH().w;
+
+
+
 </script>
 </body>
 </html>
