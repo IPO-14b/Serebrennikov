@@ -10,6 +10,44 @@ runner.html
 <script type="text/javascript" src="point.js"></script>
 <script type="text/javascript">
 
+var pjs = new PointJS('2d', 400, 400);
+pjs.system.initFullPage();
+
+var game = pjs.game;
+var point = pjs.vector.point;
+
+var height = game.getWH().h;
+var width = game.getWH().w;
+
+var fon1 = game.newImageObject({
+ x : 0, y : 0,
+ file : 'imgs/fon.jpg',
+ h : height,
+ onload : function () {
+   fon2.x = fon1.x+fon1.w;
+ }
+ 
+ var fon2 = game.newImageObject({
+ x : 0, y : 0,
+ file : 'imgs/fon.jpg',
+ h : height
+});
+ 
+
+ 
+ 
+game.newLoop('game', function () {
+  game.fill('#D9D9D9');
+
+  fon1.draw();
+
+
+}); 
+ 
+ 
+ 
+});
+
 </script>
 </body>
 </html>
