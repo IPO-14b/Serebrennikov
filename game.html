@@ -58,11 +58,12 @@ var monkey = game.newAnimationObject({
 });
 
 var moveBackGround = function (s) {
-  fon1.move(point(-s / 2, 0));
+   gr1.move(point(-s, 0));
+  gr2.move(point(-s, 0));
+ fon1.move(point(-s / 2, 0));
   fon2.move(point(-s / 2, 0));
 
-  gr1.move(point(-s, 0));
-  gr2.move(point(-s, 0));
+
 
   if (fon1.x + fon1.w < 0) {
     fon1.x = fon2.x+fon2.w;
