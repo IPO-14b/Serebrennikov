@@ -58,10 +58,11 @@ var monkey = game.newAnimationObject({
 });
 
 var moveBackGround = function (s) {
-  gr1.move(point(-s, 0));
-  gr2.move(point(-s, 0));
+
   fon1.move(point(-s / 2, 0));
   fon2.move(point(-s / 2, 0));
+  gr1.move(point(-s, 0));
+  gr2.move(point(-s, 0));
 
   if (fon1.x + fon1.w < 0) {
     fon1.x = fon2.x+fon2.w;
@@ -90,6 +91,21 @@ game.newLoop('game', function () {
   gr2.draw();
   monkey.y = -monkey.h + gr1.y + gr1.h /2.5;
   monkey.draw();
+  if (fon1.x + fon1.w < 0) {
+    fon1.x = fon2.x+fon2.w;
+  }
+
+  if (fon2.x + fon2.w < 0) {
+    fon2.x = fon1.x+fon1.w;
+  }
+
+  if (gr1.x + gr1.w < 0) {
+    gr1.x = gr2.x+gr2.w;
+  }
+
+  if (gr2.x + gr2.w < 0) {
+    gr2.x = gr1.x+gr1.w;
+  }
 
 
 }); 
