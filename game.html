@@ -60,7 +60,8 @@ var monkey = game.newAnimationObject({
 var moveBackGround = function (s) {
   fon1.move(point(-s / 2, 0));
   fon2.move(point(-s / 2, 0));
-
+  gr1.move(point(-s, 0));
+  gr2.move(point(-s, 0));
 };
 
 game.newLoop('game', function () {
