@@ -44,7 +44,7 @@ var width = game.getWH().w;
  *
  * Испоьзуется для создания фона игры
  *
- * @var  $fon1
+ * @var object $fon1
  */  
 var fon1 = game.newImageObject({
     x : 0, y : 0,
@@ -59,7 +59,7 @@ var fon1 = game.newImageObject({
  *
  * Испоьзуется для создания фона игры
  *
- * @var  $fon2
+ * @var object $fon2
  */  
 var fon2 = game.newImageObject({
     x : 0, y : 0,
@@ -71,7 +71,7 @@ var fon2 = game.newImageObject({
  *
  * Испоьзуется для создания граунда
  *
- * @var  $gr1
+ * @var object $gr1
  */  
 var gr1 = game.newImageObject({
     x : 0, y : 0,
@@ -87,7 +87,7 @@ var gr1 = game.newImageObject({
  *
  * Испоьзуется для создания граунда
  *
- * @var  $gr2
+ * @var object $gr2
  */  
 var gr2 = game.newImageObject({
     x : 0, y : 0,
@@ -99,7 +99,7 @@ var gr2 = game.newImageObject({
  *
  * Испоьзуется для создания персонаж
  *
- * @var  $gr2
+ * @var object $gr2
  */  
 var monkey = game.newAnimationObject({
     x : width / 10, y : 0,
