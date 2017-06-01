@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- This document was created with Syntext Serna Free. --><!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "docbookV4.5/docbookx.dtd" []>
+<article>
+  <articleinfo>
+    <title>Руководство программиста (Серебренников А.А. ИПО-14Б)</title>
+    <section>
+      <title>Monkey Run</title>
+      <para>Проект Monkey Run  является игрой в стиле раннер</para>
+    </section>
+  </articleinfo>
+  <section>
+    <title>Сценарий использования 1 - Загрузка игры</title>
+    <para>Пользователь нажимает кнопку Run и начинается игра.</para>
+    <para>Используются глобальные переменные и функция инициализации игры.</para>
+    <programlisting>function run() {
+      if (inPlay == 0) {
+          if (selec == 1) {
+              selec = 9;
+              inPlay = 1;
+          }
+      } else {
+          if (missileY == 99) {
+              missileY = 18;
+          }
+      }
+    }
+    </programlisting>
+  </section>
+  <section>
+    <title>Сценарий использования 2 - Управление</title>
+    <para>Пользователь нажимает кнопку Jump для прыжка.</para>
+    <para>Применяются стили в зависимости от выбора пользователя. Берется текущая дата.</para>
+    <programlisting>game.newLoop(&apos;game&apos;, function () {
+    game.fill(&apos;#D9D9D9&apos;);
+    fon1.draw();
+    fon2.draw();
+    gr1.draw();
+    gr2.draw();
+    monkey.y = -monkey.h + gr1.y + gr1.h /2.5;
+    monkey.draw();
+    moveBackGround(6.5);
+});
+
+    </programlisting>
+  </section>
+  <section>
+    <title>Сценарий использования 3 - Рестарт</title>
+    <para>Пользователь нажимает кнопку Reset для сброса игрового цикла.</para>
+    <para>Сбрасывает значения глобальных переменных к первоначальному.</para>
+    <programlisting>function restarter() {
+      inPlay = 0;
+      blankNo = 0;
+      totalBlank = &quot;&quot;;
+      lr = 1;
+      lowerLf = &quot;&quot;;
+      downLf = &quot;&quot;;
+      downNo = 0;
+      missileX = 99;
+      missileY = 99;
+      myChrx = 1;
+      myBlank = &quot;&quot;;
+      myMove = 0;
+      selec = 1;
+      starter();
+    }</programlisting>
+  </section>
+</article>
